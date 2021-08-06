@@ -25,7 +25,7 @@ function isParent(parent, child)
 console.log(isParent(document.body.children[0], document.querySelector('mark')));
 
 const allA = document.querySelectorAll('a');
-console.log(Array.from(allA).filter(child => child.parentElement.localName !== 'li'))
+console.log(Array.from(allA).filter(child => child.closest('ul')))
 
 const ul = document.querySelector('ul');
 console.log(ul.nextElementSibling, ul.previousElementSibling);
